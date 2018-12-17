@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsViewOrder" targetNamespace="http://tempuri.org/dsViewOrder.xsd" xmlns:mstns="http://tempuri.org/dsViewOrder.xsd" xmlns="http://tempuri.org/dsViewOrder.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ESEConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ESEConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ESELibrary.Properties.Settings.GlobalReference.Default.ESEConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="on_orderTableAdapter" GeneratorDataComponentClassName="on_orderTableAdapter" Name="on_order" UserDataComponentName="on_orderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ESEConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="GetData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        on_order.onordInvoiceNum, on_order.onordArriveDate, on_order.onordNumInOrder, on_order.onordPrice, product.prodName
+FROM            on_order INNER JOIN
+                         product ON on_order.id = product.id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="onordInvoiceNum" DataSetColumn="onordInvoiceNum" />
+              <Mapping SourceColumn="onordArriveDate" DataSetColumn="onordArriveDate" />
+              <Mapping SourceColumn="onordNumInOrder" DataSetColumn="onordNumInOrder" />
+              <Mapping SourceColumn="onordPrice" DataSetColumn="onordPrice" />
+              <Mapping SourceColumn="prodName" DataSetColumn="prodName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsViewOrder" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dsViewOrder" msprop:Generator_UserDSName="dsViewOrder">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="on_order" msprop:Generator_TableClassName="on_orderDataTable" msprop:Generator_TableVarName="tableon_order" msprop:Generator_RowChangedName="on_orderRowChanged" msprop:Generator_TablePropName="on_order" msprop:Generator_RowDeletingName="on_orderRowDeleting" msprop:Generator_RowChangingName="on_orderRowChanging" msprop:Generator_RowEvHandlerName="on_orderRowChangeEventHandler" msprop:Generator_RowDeletedName="on_orderRowDeleted" msprop:Generator_RowClassName="on_orderRow" msprop:Generator_UserTableName="on_order" msprop:Generator_RowEvArgName="on_orderRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="onordInvoiceNum" msprop:Generator_ColumnVarNameInTable="columnonordInvoiceNum" msprop:Generator_ColumnPropNameInRow="onordInvoiceNum" msprop:Generator_ColumnPropNameInTable="onordInvoiceNumColumn" msprop:Generator_UserColumnName="onordInvoiceNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="onordArriveDate" msprop:Generator_ColumnVarNameInTable="columnonordArriveDate" msprop:Generator_ColumnPropNameInRow="onordArriveDate" msprop:Generator_ColumnPropNameInTable="onordArriveDateColumn" msprop:Generator_UserColumnName="onordArriveDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="onordNumInOrder" msprop:Generator_ColumnVarNameInTable="columnonordNumInOrder" msprop:Generator_ColumnPropNameInRow="onordNumInOrder" msprop:Generator_ColumnPropNameInTable="onordNumInOrderColumn" msprop:Generator_UserColumnName="onordNumInOrder" type="xs:int" minOccurs="0" />
+              <xs:element name="onordPrice" msprop:Generator_ColumnVarNameInTable="columnonordPrice" msprop:Generator_ColumnPropNameInRow="onordPrice" msprop:Generator_ColumnPropNameInTable="onordPriceColumn" msprop:Generator_UserColumnName="onordPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="prodName" msprop:Generator_ColumnVarNameInTable="columnprodName" msprop:Generator_ColumnPropNameInRow="prodName" msprop:Generator_ColumnPropNameInTable="prodNameColumn" msprop:Generator_UserColumnName="prodName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -8,5 +8,7 @@ Unfortunatley Github doesn't push built libraries so...
   1. Open ESELibrary.sln and build the solution.
   2. Open ESEWebsite.sln and build the solution (you may have to wait a few minutes for the references to load, etc).
 
+![alt text](Screenshots/HomePage.png "Home Page")
 
+![alt text](Screenshots/ReportsPage.png "Reports Page")
 
